@@ -1,0 +1,493 @@
+@import "_variables";
+
+// Imported Fonts.
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+
+body {
+  margin: auto;
+  max-width: 1000px;
+  font-family: $mainFont;
+  color: $mainFontColor;
+}
+
+header {
+
+  div.top-banner-flex {
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    align-items: center;
+    background-color: $topBannerBackgroundColor;
+
+    .top-banner-left {
+      display: flex;
+      flex: 1;
+      justify-content: flex-start;
+    }
+    
+    h3 {
+      font-family: $topBannerFont;
+      color: $topBannerFontColor;
+      margin-left: 10px;
+    }
+  }
+
+  div.top-banner-right {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+
+    input[type=text],
+    input[type=email] {
+      color: $inputFontColor;
+      font-family: $inputFontFamily;
+      font-size: 12px;
+      padding: 5px 8px;
+      border: none;
+      border-radius: 5px;
+      letter-spacing: 2px;
+    } 
+
+    input[type=submit] {
+      background-color: $submitButtonBackgroundColor;
+      color: $submitButtonFontColor;
+      font-size: $submitButtonFontSize;
+      padding: 5px 8px;
+      border: none;
+      border-radius: 10px;
+      letter-spacing: 2px;
+      margin: 0 5px;
+
+      &:hover {
+        background-color: $submitButtonBackgroundColorHover;
+        color: $submitButtonFontColorHover;
+      }
+    }
+  }
+}
+
+nav {
+  .nav-menu-position {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .nav-left-menu {
+      display: flex;
+      flex: 1;
+      justify-content: flex-start;
+      align-items: center;
+
+      h1 {
+        display: flex;
+        font-size: 50px;
+        font-family: $mainTitleFont;
+        color: $mainTitleFontColor;
+        line-height: 50px;
+        text-transform: uppercase;
+      }
+  
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+        a {
+          text-decoration: none;
+          color: $navLinksFontColor;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: $navLinksFontSize; 
+
+          &:hover {
+            color: $navLinksFontColorHover;
+          }
+        }
+      }
+    }
+
+    .nav-right-menu {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      align-items: center;
+
+      a {
+        padding: 7px;
+        text-decoration: none;
+        color: #787878;
+        align-self: center;
+      }
+    }
+  }
+}
+
+hr {
+  border-color: #c3d4de;
+  opacity: 0.2;
+}
+
+.main-dishes-section {
+
+  h2 {
+    color: $mainDishesFontColor;
+    margin: 10px;
+    font-size: 25px;
+  }
+
+  .main-three-dishes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .dish-description {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      text-align: center;
+
+      img {
+        width: 100%;
+      }
+
+      h4 {
+        font-size: 16px;
+        color: $mainDishesTitleColor;
+        margin-top: 5px;
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 22px;
+        color: $dinnerDishDescriptionFontColor;
+        margin-top: 10px;
+      }
+    }
+  }
+} 
+
+.about-me-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .about-me-description {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    margin-right: 30px;
+    background-color: $aboutMeSectionBackgroundColor;
+    padding: 15px 40px 13px 15px;
+
+    .about-me-img {
+      display: flex;
+      flex: 1;
+
+      img {
+        height: auto;
+        width: 80%;
+        border-radius: 50%;
+      }
+    }
+
+    .about-me-text {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 18px;
+
+      h3 {
+        color: $aboutMeSectionTitleColor;
+        margin-bottom: 5px;
+      }
+      p {
+        color: $aboutMeSectionTextColor;
+      }
+    }
+}
+
+.about-dog {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  background-color: $aboutMeSectionBackgroundColor;
+
+  a {
+    color: $aboutMeSectionDogTextColor;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    }
+  }
+}
+
+.article-aside-flex {
+  display: flex;
+  flex-direction: row;
+
+  .article-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    flex: 3;
+
+    .article-content {
+      padding: 10px 15px;
+
+      .post {
+        display: flex;
+        flex-direction: row;
+
+        .post-image {
+          flex: 1;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .post-description {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          padding: 10px 15px;
+
+          .post-date {
+            p {
+              color: $postDateFontColor;
+              font-size: 12px;
+              font-family: fantasy;
+              margin-bottom: 15px;
+              margin-top: 0;
+            }
+          }
+
+          h3 {
+            color: $postTitleRecipeFontColor;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 24px;
+            margin: 0;
+          }
+
+          p {
+            color: $postParagraphRecipeFontColor;
+            font-size: 18px;
+            margin-bottom: 30px;
+          }
+
+          button {
+            display: flex;
+            justify-content: center;
+            background-color: $continueReadingFontColor;
+            border: none;
+            border-radius: 3px;
+            width: 50%;
+            color: white;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.aside-advertising {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .advertising-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+
+    h4 {
+      color: $advertisingTitleFontColor;
+      text-align: center;
+      font-size: 16px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-top: 5px;
+    }
+  }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+
+  .footer-social,
+  .footer-organization,
+  .footer-information,
+  .footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px 20px; 
+
+    h4 {
+      color: $footerTitleFontColor;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 0;
+      color: $footerParagraphFontColor;
+    }
+
+    .sign-up-news {
+      input[type=email] {
+        color: $inputFooterFontColor;
+        font-family: $mainFont;
+        font-size: 12px;
+        padding: 5px 8px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+      }
+
+      button {
+        font-family: 'Heebo', sans-serif;
+        color: #ffffff;
+        background-color: $submitButtonFooterBackgroundColor;
+        border: 0;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 16px;
+        padding: 5px 10px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+.photos-source {
+  margin-top: 50px;
+  text-align: start;
+
+  a {
+    color: #a7a6a6;
+  }
+}
+
+.contact-links {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* iPad version */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    div.top-banner-flex {
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+    }
+  }
+  nav {
+    .nav-menu-position {
+      flex-direction: column;
+    }
+  }
+}
+
+/* iPhone version */
+@media (max-width: 812px) {
+  header {
+    flex-direction: column;
+    div.top-banner-flex {
+      height: 120px;
+      flex-direction: column;
+    }
+  }
+
+  nav {
+    .nav-right-menu {
+      a {
+        display: none;
+      }
+    }
+    .nav-menu-position {
+      flex-direction: column;
+    }
+    .nav-left-menu {
+      flex-direction: column;
+    }
+  }
+  
+  .main-dishes-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .main-three-dishes {
+      flex-direction: column;
+      width: 80%;
+    }
+  }
+  
+  .about-me-section {
+    flex-direction: column;
+    .about-me-description {
+      margin-right: 0;
+    }
+    .about-dog {
+      display: none;
+    }
+  }
+
+  h2 {
+    margin-left: 12px;
+  }
+
+  .article-aside-flex {
+    flex-direction: column;
+  }
+ 
+  .article-content .post {
+    flex-direction: column !important;
+  }
+
+  .aside-advertising {
+    flex-direction: column;
+  }
+  
+  .advertising-info {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .flex-footer {
+    flex-direction: column;
+    justify-content: center;
+
+    .footer-social,
+    .footer-organization,
+    .footer-information,
+    .footer-newsletter {
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+  }
+
+  .photos-source {
+    text-align: center;
+  }
+}
